@@ -14,7 +14,7 @@ men ikke recommended - også docker problemer.
 ###
 opret app registration.
 
-Vælg platform: web og sæt DNS URL/auth/callback
+Vælg platform: web og sæt DNS URL/auth/callback ###faktisk ikke /auth/callback åbenbart
 som redirect url
 
 ##
@@ -67,3 +67,5 @@ server {
 
 test at det virker:
 sudo nginx -t
+sudo docker run -p 8501:8501 [image:version]
+^bemærk at du ikke længere kan mappe -p 80:850
