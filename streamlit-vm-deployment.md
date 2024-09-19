@@ -25,11 +25,11 @@ sudo certbot --nginx -d {{domain}}
 
 
 
-.streamlit/sectrets.toml
+app/.streamlit/sectrets.toml
 sæt:
 [browser]
 enableCORS = false
-
+gem også azure secrets her. bemærk at det skal være inden for app folderen
 
 
 sudo nano /etc/nginx/sites-available/default
