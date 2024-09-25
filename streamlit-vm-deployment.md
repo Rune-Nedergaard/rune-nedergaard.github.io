@@ -69,3 +69,22 @@ test at det virker:
 sudo nginx -t
 sudo docker run -p 8501:8501 [image:version]
 ^bemærk at du ikke længere kan mappe -p 80:850
+
+
+tilføj i både: 
+
+sudo nano /etc/nginx/sites-available/default
+sudo nano /etc/nginx/nginx.conf
+
+dette:
+
+http {
+    client_max_body_size 200M;  # Tilføj denne linje
+    # Andre indstillinger kan komme her
+}
+
+test:
+(mask) RUN@DIdevGPU:~/Github/DataMasking/app$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+(mask) RUN@DIdevGPU:~/Github/DataMasking/app$ sudo systemctl reload nginx
